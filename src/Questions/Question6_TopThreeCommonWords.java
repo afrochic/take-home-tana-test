@@ -1,6 +1,7 @@
 package Questions;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Question6_TopThreeCommonWords {
     public static List<String> getTopThreeFrequentWords(String text) {
@@ -19,6 +20,7 @@ public class Question6_TopThreeCommonWords {
                         : b.getValue() - a.getValue())
                 .limit(3)
                 .map(Map.Entry::getKey)
-                .toList();
+                .collect(Collectors.toList());
+
     }
 }

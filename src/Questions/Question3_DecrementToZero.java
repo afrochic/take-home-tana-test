@@ -1,14 +1,12 @@
 package Questions;
 
 public class Question3_DecrementToZero {
-    public static int minimumOperationsToZero(int number) {
-        int operations = 0;
 
-        while (number > 0) {
-            number = (number % 2 == 0) ? number / 2 : number - 1;
-            operations++;
+    public static boolean minimumOperationsToZero(int[] array) {
+        int total = 0;
+        for (int i = 1; i < array.length; i++) {
+            total += array[i];
         }
-
-        return operations;
+        return total <= array[0];
     }
 }

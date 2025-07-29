@@ -3,15 +3,26 @@ package Questions;
 import java.util.*;
 
 public class Question2_UniqueSums {
-    public static int countUniqueSums(List<Integer> numbers) {
-        Set<Integer> uniqueSums = new HashSet<>();
 
-        for (int i = 0; i < numbers.size(); i++) {
-            for (int j = i + 1; j < numbers.size(); j++) {
-                uniqueSums.add(numbers.get(i) + numbers.get(j));
-            }
+    public static int countUniqueSums(List<Integer> numbers, int targetSum) {
+        Set<List<Integer>> uniqueCombinations = new HashSet<>();
+        Collections.sort(numbers);
+        backtrack(0, new ArrayList<>(), numbers, targetSum, uniqueCombinations);
+        return uniqueCombinations.size();
+    }
+
+    private static void backtrack(int index, List<Integer> current, List<Integer> nums, int remaining, Set<List<Integer>> combinations) {
+        if (remaining == 0) {
+            combinations.add(new ArrayList<>(current));
+            return;
         }
 
-        return uniqueSums.size();
+        for (int i = index; i < nums.size(); i++) {
+            int num = nums.get(i);
+            if (num > remaining) continue;
+            current.add(num);
+            backtrack(i + 1, current, nums, remaining - num, combinations);
+            current.remove(current.size() - 1);
+        }
     }
 }
