@@ -1,18 +1,30 @@
-# Tana Technical Assessment – Tufin Junior Developer
+# 🔍 Java Coding Assessment – Problem Set by Diana Musee
 
-**Language Used:** Java 17  
-(You may replace with C++17 if needed)
+This repository contains Java solutions to 7 algorithmic coding questions I completed as part of a timed technical assessment for a Junior Developer role. Each solution was written from scratch with a focus on readability, logic, and efficiency. I included inline comments, test cases, and a runnable `Main` class to demonstrate results for each question.
 
-## Instructions to Run
-- Compile: `javac QuestionX_*.java`
-- Run: `java QuestionX_*`
+The project handles tasks like rotating lists, validating brackets, detecting unique entries, and computing gaps or frequencies — useful real-world patterns in software development.
 
-## Solutions Overview
+---
 
-**Q1:** Filters valid strings and checks for adjacent duplicates.  
-**Q2:** Uses backtracking to count unique combinations summing to target.  
-**Q3:** Simulates decrements to reduce array to [a0, 0, 0, ..., 0].  
-**Q4:** Uses a hash map to count and return the first unique product.  
-**Q5:** Finds the smallest number and returns minimum distance between two of them.  
-**Q6:** Uses frequency map and sorting to return top 3 common words.  
-**Q7:** Implements circular rotation of a linked list to the right by `n` positions.
+## 📌 Questions Implemented
+
+### ✅ Question 1: Find Unique Pairs That Sum to a Target
+### ✅ Question 2: Validate Bracket String
+### ✅ Question 3: Anagram Checker
+### ✅ Question 4: First Unique Product
+### ✅ Question 5: Minimum Distance Between Duplicate Minimums
+### ✅ Question 6: Top 3 Most Frequent Words
+### ✅ Question 7: Rotate List to the Right (Now works with `List<String>`)
+
+Each question is modularized in its own `.java` file under the `Questions/` directory.
+
+---
+
+## 🧪 Running the Program
+
+### 🔹 Main Demo
+All questions are executed from the `Main.java` class.
+
+#### 🛠 Compile:
+```bash
+javac Questions/*.java Main.java
